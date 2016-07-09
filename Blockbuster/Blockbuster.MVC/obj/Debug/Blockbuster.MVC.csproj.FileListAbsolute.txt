@@ -35,3 +35,5 @@ D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\b
 D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\EntityFramework.SqlServer.dll
 D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\EntityFramework.xml
 D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\EntityFramework.SqlServer.xml
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\obj\Debug\Blockbuster.MVC.Migrations.Initial.resources
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\obj\Debug\Blockbuster.MVC.csproj.GenerateResource.Cache

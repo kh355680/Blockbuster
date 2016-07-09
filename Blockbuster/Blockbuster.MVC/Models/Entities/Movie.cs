@@ -13,6 +13,6 @@ namespace Blockbuster.MVC.Models.Entities
 
         [ForeignKey("GenreId")]
         public virtual Genre Genre { get; set; } 
-        public virtual IEnumerable<Artist> Artists { get; set; } 
+        public virtual IEnumerable<MovieCast> Casting { get; set; } 
     }
 }

@@ -110,7 +110,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607091911426_Initial.cs" />
+    <Compile Include="Migrations\201607091911426_Initial.Designer.cs">
+      <DependentUpon>201607091911426_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Entities\Artist.cs" />
+    <Compile Include="Models\Entities\Cast.cs" />
     <Compile Include="Models\Entities\Entity.cs" />
     <Compile Include="Models\Entities\Genre.cs" />
     <Compile Include="Models\Entities\Movie.cs" />
@@ -133,6 +140,11 @@
     <Folder Include="Views\Dashboard\" />
     <Folder Include="Views\Genre\" />
     <Folder Include="Views\Movie\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607091911426_Initial.resx">
+      <DependentUpon>201607091911426_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
