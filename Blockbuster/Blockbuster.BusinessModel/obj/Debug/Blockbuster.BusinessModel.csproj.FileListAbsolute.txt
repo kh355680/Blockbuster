@@ -1,0 +1,12 @@
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\bin\Debug\Blockbuster.BusinessModel.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\bin\Debug\Blockbuster.BusinessModel.pdb
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\obj\Debug\Blockbuster.BusinessModel.csprojResolveAssemblyReference.cache
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\obj\Debug\Blockbuster.BusinessModel.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\obj\Debug\Blockbuster.BusinessModel.pdb
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\bin\Debug\Blockbuster.BusinessModel.dll.config
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\bin\Debug\EntityFramework.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\bin\Debug\EntityFramework.xml
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\obj\Debug\Blockbuster.BusinessModel.Migrations.Initial.resources
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.BusinessModel\obj\Debug\Blockbuster.BusinessModel.csproj.GenerateResource.Cache

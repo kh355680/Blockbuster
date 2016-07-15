@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin Dashboard</title>
+</head>
+<body>
+<div>
+    <h1>Admin Dashboard</h1>
+
+    <div>
+        @Html.ActionLink("Genres", "Index", "Genre") <br/>
+        @Html.ActionLink("Movies", "Index", "Movie") <br/>
+        @Html.ActionLink("Artists", "Index", "Artist") <br />
+    </div>
+</div>
+</body>
+</html>

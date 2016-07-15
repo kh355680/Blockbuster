@@ -127,6 +127,10 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Artist\Index.cshtml" />
+    <Content Include="Views\Genre\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -136,10 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Artist\" />
-    <Folder Include="Views\Dashboard\" />
-    <Folder Include="Views\Genre\" />
-    <Folder Include="Views\Movie\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201607091911426_Initial.resx">
