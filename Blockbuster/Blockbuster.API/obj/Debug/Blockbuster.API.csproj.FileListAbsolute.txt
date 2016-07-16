@@ -34,3 +34,5 @@ D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.API\b
 D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.API\bin\Blockbuster.Repositories.pdb
 D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.API\bin\EntityFramework.xml
 D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.API\bin\EntityFramework.SqlServer.xml
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.API\bin\Blockbuster.Service.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.API\bin\Blockbuster.Service.pdb

@@ -6,24 +6,28 @@ using System.Web.Http;
 using Blockbuster.BusinessModel.Entities;
 using Blockbuster.Repositories.IRepositories;
 using Blockbuster.Repositories.Repositories;
+using Blockbuster.Service.IService;
+using Blockbuster.Service.Service;
 
 namespace Blockbuster.API.Controllers
 {
     public class GenreController : ApiController
     {
-        public IGenreRepository Repository { get; set; }
+
+        public IGenreService Service { get; set; }
+
         private bool _isDataSaved;
 
         public GenreController()
         {
-            Repository = new GenreRepository();
+            Service = new GenreService();
             _isDataSaved = false;
         }
 
         [HttpGet]
         public async Task<IHttpActionResult> Get()
         {
-            var genres = Repository.GetList();
+            var genres = Service.GetAll();
 
             if (await genres.CountAsync() > 0)
                 return Ok(genres);
@@ -34,7 +38,7 @@ namespace Blockbuster.API.Controllers
         [HttpGet]
         public IHttpActionResult Get([FromUri] string id)
         {
-            var genre = Repository.GetById(id);
+            var genre = Service.GetById(id);
 
             if (genre != null)
                 return Ok(genre);
@@ -49,7 +53,7 @@ namespace Blockbuster.API.Controllers
 
             if (ModelState.IsValid)
             {
-                var result = await Repository.Insert(genre);
+                var result = await Service.Insert(genre);
 
                 if (result)
                     return Ok("New Genre Created");
@@ -63,7 +67,7 @@ namespace Blockbuster.API.Controllers
         {
             if (ModelState.IsValid)
             {
-               var isDataSaved = await Repository.Update(genre);
+               var isDataSaved = await Service.Update(genre);
 
                 if (isDataSaved)
                     return Ok("Genre Info Updated");
@@ -75,7 +79,7 @@ namespace Blockbuster.API.Controllers
         [HttpDelete]
         public async Task<IHttpActionResult> Delete(string id)
         {
-            _isDataSaved = await Repository.Delete(id);
+            _isDataSaved = await Service.Remove(id);
 
             if (_isDataSaved)
                 return Ok("Genre Removed Successfully");

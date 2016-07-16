@@ -121,6 +121,10 @@
       <Project>{a46d81dc-8a11-4f25-b53c-89c0a43a7dc9}</Project>
       <Name>Blockbuster.Repositories</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Blockbuster.Service\Blockbuster.Service.csproj">
+      <Project>{f7b29c14-19e5-4f79-90a9-b3bdd60f23d6}</Project>
+      <Name>Blockbuster.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

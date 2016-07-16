@@ -1,0 +1,14 @@
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\Blockbuster.Service.dll.config
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\Blockbuster.Service.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\Blockbuster.Service.pdb
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\Blockbuster.BusinessModel.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\Blockbuster.Repositories.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\EntityFramework.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\EntityFramework.SqlServer.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\Blockbuster.BusinessModel.pdb
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\Blockbuster.Repositories.pdb
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\EntityFramework.xml
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\bin\Debug\EntityFramework.SqlServer.xml
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\obj\Debug\Blockbuster.Service.csprojResolveAssemblyReference.cache
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\obj\Debug\Blockbuster.Service.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.Service\obj\Debug\Blockbuster.Service.pdb
