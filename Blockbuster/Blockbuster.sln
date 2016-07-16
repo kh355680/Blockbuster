@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blockbuster.BusinessModel",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blockbuster.Repositories", "Blockbuster.Repositories\Blockbuster.Repositories.csproj", "{A46D81DC-8A11-4F25-B53C-89C0A43A7DC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blockbuster.API", "Blockbuster.API\Blockbuster.API.csproj", "{6B51356B-F18D-4A82-8777-BE7A29D7A55B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{A46D81DC-8A11-4F25-B53C-89C0A43A7DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A46D81DC-8A11-4F25-B53C-89C0A43A7DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A46D81DC-8A11-4F25-B53C-89C0A43A7DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B51356B-F18D-4A82-8777-BE7A29D7A55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B51356B-F18D-4A82-8777-BE7A29D7A55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B51356B-F18D-4A82-8777-BE7A29D7A55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B51356B-F18D-4A82-8777-BE7A29D7A55B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +60,6 @@ Global
 		{ED186016-CF48-4EB2-8002-4D0DC6D2F364} = {6935C004-E9E1-423C-995E-58AE56A58F6D}
 		{BC247BFE-9F9D-4CB6-906F-1331C2B9231D} = {D13EFD24-6DE3-4F1A-A55A-660CDE33C7CF}
 		{A46D81DC-8A11-4F25-B53C-89C0A43A7DC9} = {000514B9-1ECE-4E0C-8168-DD9AFDEC0D77}
+		{6B51356B-F18D-4A82-8777-BE7A29D7A55B} = {CB2CC4DB-FE76-4034-ADC2-30DAFF97D181}
 	EndGlobalSection
 EndGlobal

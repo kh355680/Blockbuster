@@ -21,9 +21,9 @@ namespace Blockbuster.Repositories.Repositories
             return genres;
         }
 
-        public async Task<Genre> GetById(string id)
+        public Genre GetById(string id)
         {
-            var genre = await Context.Genres.FindAsync(id);
+            var genre = Context.Genres.Find(id);
             return genre;
         }
 
@@ -66,7 +66,7 @@ namespace Blockbuster.Repositories.Repositories
 
         public async Task<bool> Save()
         {
-            return await Context.SaveChangesAsync() < 0;
+            return await Context.SaveChangesAsync() > 0;
         }
     }
 }
