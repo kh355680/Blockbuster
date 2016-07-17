@@ -50,8 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IRepositories\IGenreRepository.cs" />
+    <Compile Include="IRepositories\IMovieRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GenreRepository.cs" />
+    <Compile Include="Repositories\MovieRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Blockbuster.BusinessModel\Blockbuster.BusinessModel.csproj">

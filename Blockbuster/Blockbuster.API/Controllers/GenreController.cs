@@ -4,8 +4,6 @@ using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Blockbuster.BusinessModel.Entities;
-using Blockbuster.Repositories.IRepositories;
-using Blockbuster.Repositories.Repositories;
 using Blockbuster.Service.IService;
 using Blockbuster.Service.Service;
 
