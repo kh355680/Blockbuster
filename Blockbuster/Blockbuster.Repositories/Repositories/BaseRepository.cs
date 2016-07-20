@@ -12,9 +12,9 @@ namespace Blockbuster.Repositories.Repositories
         public Context Context { get; set; }
         public DbSet<TEntity> Table { get; set; } 
 
-        public BaseRepository()
+        public BaseRepository(Context context)
         {
-            Context = new Context();
+            Context = context;
             Table = Context.Set<TEntity>();
         } 
 

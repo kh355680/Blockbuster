@@ -3,7 +3,7 @@ using Blockbuster.BusinessModel.Entities;
 
 namespace Blockbuster.API.Controllers
 {
-    public class GenreController : BaseController<Genre>
+    public class MovieCastController : BaseController<MovieCast>
     {
     }
 }

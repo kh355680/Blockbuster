@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Blockbuster.BusinessModel.Entities;
 using Blockbuster.Repositories.IRepositories;
@@ -27,6 +28,7 @@ namespace Blockbuster.Service.Service
 
         public Task<bool> Insert(TEntity entity)
         {
+            entity.Id = Guid.NewGuid().ToString();
             return Repository.Insert(entity);
         }
 
