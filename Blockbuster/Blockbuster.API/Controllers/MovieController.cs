@@ -5,28 +5,31 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Blockbuster.BusinessModel.Entities;
 using Blockbuster.Repositories.Repositories;
+using Blockbuster.Service.IService;
+using Blockbuster.Service.Service;
 
 namespace Blockbuster.API.Controllers
 {
     public class MovieController : ApiController
     {
-        public BaseRepository<Movie> Repository { get; set; }
+        public IBaseService<Movie> Service { get; set; }
 
         public MovieController()
         {
-            Repository = new BaseRepository<Movie>();
+            var repository = new BaseRepository<Movie>();
+            Service = new BaseService<Movie>(repository);
         }
 
         [HttpGet]        
         public IHttpActionResult Get()
         {
-            return Ok(Repository.GetAll().ToList());
+            return Ok(Service.Query().ToList());
         }
 
         [HttpGet]
         public IHttpActionResult Get(string id)
         {
-            return Ok(Repository.GetById(id));
+            return Ok(Service.Find(id));
         }
 
 
@@ -34,19 +37,19 @@ namespace Blockbuster.API.Controllers
         public async Task<IHttpActionResult> Post(Movie movie)
         {
             movie.Id = Guid.NewGuid().ToString();
-            return Ok(await Repository.Insert(movie));
+            return Ok(await Service.Insert(movie));
         }
 
         [HttpPut]
         public async Task<IHttpActionResult> Put(Movie movie)
         {
-            return Ok(await Repository.Update(movie));
+            return Ok(await Service.Update(movie));
         }
 
         [HttpDelete]
         public async Task<IHttpActionResult> Delete(string id)
         {
-            return Ok(await Repository.Remove(id));
+            return Ok(await Service.Delete(id));
         } 
          
     }

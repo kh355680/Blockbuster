@@ -49,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IService\IBaseService.cs" />
     <Compile Include="IService\IGenreService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BaseService.cs" />
     <Compile Include="Service\GenreService.cs" />
   </ItemGroup>
   <ItemGroup>
