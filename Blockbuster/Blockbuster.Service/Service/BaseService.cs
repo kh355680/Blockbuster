@@ -18,7 +18,7 @@ namespace Blockbuster.Service.Service
 
         public IQueryable<TEntity> Query()
         {
-            return Repository.GetAll();
+            return Repository.GetAll().AsQueryable();
         }
 
         public TEntity Find(string id)

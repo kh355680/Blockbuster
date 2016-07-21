@@ -1,11 +1,10 @@
 ﻿
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Blockbuster.BusinessModel;
 using Blockbuster.BusinessModel.Entities;
-using Blockbuster.Repositories.Repositories;
 using Blockbuster.Service.IService;
-using Blockbuster.Service.Service;
+
 
 namespace Blockbuster.API.Controllers
 {
@@ -13,17 +12,15 @@ namespace Blockbuster.API.Controllers
     { 
         public IBaseService<TEntity> Service { get; set; }
          
-        public BaseController()
+        public BaseController(IBaseService<TEntity> service)
         {
-            var context = new Context();
-            var repository = new BaseRepository<TEntity>(context);
-            Service = new BaseService<TEntity>(repository);
+            Service = service;
         }
 
         [HttpGet]
         public virtual IHttpActionResult Get()
         {
-            return Ok(Service.Query());
+            return Ok(Service.Query().AsQueryable());
         }
 
         [HttpGet]

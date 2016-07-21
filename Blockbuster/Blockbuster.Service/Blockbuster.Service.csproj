@@ -51,7 +51,11 @@
   <ItemGroup>
     <Compile Include="IService\IBaseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ArtistService.cs" />
     <Compile Include="Service\BaseService.cs" />
+    <Compile Include="Service\GenreService.cs" />
+    <Compile Include="Service\MovieCastService.cs" />
+    <Compile Include="Service\MovieService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
