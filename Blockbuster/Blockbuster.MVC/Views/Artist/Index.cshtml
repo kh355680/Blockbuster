@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Blockbuster.BusinessModel.Entities.Artist>
 @{
     Layout = null;
 }
@@ -12,7 +12,30 @@
 </head>
 <body>
 <div>
-    <p>Artist Index</p>
+    @Html.ActionLink("Add New","Create","Artist")
+</div>
+<div>
+
+    <table>
+        <thead>
+        <tr>
+            <td>Artist Name</td>
+            <td>Actions</td>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var artist in @Model)
+        {
+            <tr>
+                <td>@artist.Name</td>
+                <td>
+                    @Html.ActionLink("Edit","Edit","Artist",new { id = artist.Id},null)
+                    @Html.ActionLink("Delete", "Delete", "Artist", new { id = artist.Id }, null)
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
 </div>
 </body>
 </html>

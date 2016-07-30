@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Blockbuster.BusinessModel.Entities.Movie>
 @{
     Layout = null;
 }
@@ -12,7 +12,11 @@
 </head>
 <body>
 <div>
-    <p>Movie Index</p>
+
+    @foreach (var movie in Model)
+    {
+        <div>@movie.Name - <span>@movie.Genre.Name</span></div>        
+    }
 </div>
 </body>
 </html>

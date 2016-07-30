@@ -35,5 +35,9 @@ D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\b
 D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\EntityFramework.SqlServer.dll
 D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\EntityFramework.xml
 D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\EntityFramework.SqlServer.xml
-D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\obj\Debug\Blockbuster.MVC.Migrations.Initial.resources
-D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\obj\Debug\Blockbuster.MVC.csproj.GenerateResource.Cache
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\Blockbuster.BusinessModel.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\Blockbuster.Repositories.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\Blockbuster.Service.dll
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\Blockbuster.BusinessModel.pdb
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\Blockbuster.Repositories.pdb
+D:\Development\Personal Projects\Movie Blockbuster\Blockbuster\Blockbuster.MVC\bin\Blockbuster.Service.pdb

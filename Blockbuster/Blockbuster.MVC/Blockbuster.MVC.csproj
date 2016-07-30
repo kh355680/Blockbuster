@@ -9,13 +9,13 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0450C541-0BD5-4250-A063-1D42A6F119B5}</ProjectGuid>
+    <ProjectGuid>{9CE8A166-9BE9-4837-B749-A58A6A738FCD}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Blockbuster.MVC</RootNamespace>
     <AssemblyName>Blockbuster.MVC</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -103,34 +103,26 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArtistController.cs" />
-    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201607091911426_Initial.cs" />
-    <Compile Include="Migrations\201607091911426_Initial.Designer.cs">
-      <DependentUpon>201607091911426_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Context.cs" />
-    <Compile Include="Models\Entities\Artist.cs" />
-    <Compile Include="Models\Entities\Cast.cs" />
-    <Compile Include="Models\Entities\Entity.cs" />
-    <Compile Include="Models\Entities\Genre.cs" />
-    <Compile Include="Models\Entities\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Dashboard\Index.cshtml" />
-    <Content Include="Views\Movie\Index.cshtml" />
-    <Content Include="Views\Artist\Index.cshtml" />
     <Content Include="Views\Genre\Index.cshtml" />
+    <Content Include="Views\Genre\Edit.cshtml" />
+    <Content Include="Views\Genre\Create.cshtml" />
+    <Content Include="Views\Artist\Index.cshtml" />
+    <Content Include="Views\Artist\Create.cshtml" />
+    <Content Include="Views\Artist\Edit.cshtml" />
+    <Content Include="Views\Artist\Delete.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -140,11 +132,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201607091911426_Initial.resx">
-      <DependentUpon>201607091911426_Initial.cs</DependentUpon>
-    </EmbeddedResource>
+    <ProjectReference Include="..\Blockbuster.BusinessModel\Blockbuster.BusinessModel.csproj">
+      <Project>{bc247bfe-9f9d-4cb6-906f-1331c2b9231d}</Project>
+      <Name>Blockbuster.BusinessModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Blockbuster.Repositories\Blockbuster.Repositories.csproj">
+      <Project>{a46d81dc-8a11-4f25-b53c-89c0a43a7dc9}</Project>
+      <Name>Blockbuster.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Blockbuster.Service\Blockbuster.Service.csproj">
+      <Project>{f7b29c14-19e5-4f79-90a9-b3bdd60f23d6}</Project>
+      <Name>Blockbuster.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -159,7 +161,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50117</DevelopmentServerPort>
+          <DevelopmentServerPort>52629</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:50117/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

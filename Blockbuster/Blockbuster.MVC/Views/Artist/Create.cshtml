@@ -1,0 +1,28 @@
+﻿@using System.Collections
+@model Blockbuster.BusinessModel.Entities.Artist
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+<div>
+    @using (Html.BeginForm("Create", "Artist", FormMethod.Post))
+    {
+        @Html.LabelFor(artist => artist.Name) 
+        @Html.TextBoxFor(artist => artist.Name)
+        <br />
+        @Html.LabelFor(artist => artist.Gender)
+        @Html.TextBoxFor(artist => artist.Gender)
+        <br/>
+        @Html.TextBox("Submit", "Submit",null,new {@type="submit"})
+    }
+</div>
+</body>
+</html>
