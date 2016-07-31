@@ -1,16 +1,5 @@
 ﻿@model Blockbuster.BusinessModel.Entities.Genre
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
 <div>
     @using (Html.BeginForm("Create","Genre",FormMethod.Post))
     {
@@ -18,5 +7,3 @@
         @Html.TextBox("Save","Save", new {@type="submit"})
     }
 </div>
-</body>
-</html>
