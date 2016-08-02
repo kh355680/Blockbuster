@@ -26,5 +26,18 @@ namespace Blockbuster.MVC.Controllers
             var movies = MovieService.Query().Include(movie => movie.Genre).ToList();
             return View(movies);
         }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Movie movie)
+        {
+            MovieService.Insert(movie);
+            return RedirectToAction("Index", "Movie");
+        }
     }
 }

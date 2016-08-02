@@ -1,24 +1,16 @@
 ﻿
 @model Blockbuster.BusinessModel.Entities.Artist
 
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Delete</title>
-</head>
-<body>
 <div>
-    <h2>Are You Sure, You want to delete artist information for @Model.Name</h2>
-    @using (Html.BeginForm("Delete","Artist",FormMethod.Post))
+    <h2>Are You Sure, You want to delete @Model.Name</h2>
+    @using (Html.BeginForm("Delete", "Artist", FormMethod.Post))
     {
-        @Html.TextBox("Delete", "Delete", new {type="submit"})
+
+        @Html.TextBox("Delete", "Delete", new { type = "submit", @class = "btn btn-danger" })
+
+        <span>&nbsp;</span>
+        
+        @Html.ActionLink("Cancel", "Index", "Artist", null, new {@class="btn btn-warning"})
+
     }
 </div>
-</body>
-</html>

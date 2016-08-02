@@ -1,11 +1,12 @@
 ﻿@model IEnumerable<Blockbuster.BusinessModel.Entities.Artist>
 
 <div>
-    @Html.ActionLink("Add New","Create","Artist")
+    
+    @Html.ActionLink("Add New", "Create", "Artist", null ,new {@class = "pull-right"})
 </div>
 <div>
 
-    <table>
+    <table class="table">
         <thead>
         <tr>
             <td>Artist Name</td>
@@ -18,7 +19,7 @@
             <tr>
                 <td>@artist.Name</td>
                 <td>
-                    @Html.ActionLink("Edit","Edit","Artist",new { id = artist.Id},null)
+                    @Html.ActionLink("Edit","Edit","Artist",new { id = artist.Id},null) |
                     @Html.ActionLink("Delete", "Delete", "Artist", new { id = artist.Id }, null)
                 </td>
             </tr>

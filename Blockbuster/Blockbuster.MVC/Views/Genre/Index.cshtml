@@ -1,7 +1,6 @@
 ﻿@model IEnumerable<Blockbuster.BusinessModel.Entities.Genre>
 
-<div>
-    <span>Genre List</span>    
+<div>   
     <span class="pull-right"> @Html.ActionLink("Create New","Create","Genre")</span>
 </div>
 
@@ -18,8 +17,8 @@
             <tr>
                 <td>@genre.Name</td>
                 <td>
-                    <a class="btn btn-info" href="http://localhost:50117/Genre/Edit/@genre.Id">Edit</a>
-                    <a class="btn btn-danger" href="http://localhost:50117/Genre/Delete/@genre.Id">Remove</a>
+                    <a href="http://localhost:50117/Genre/Edit/@genre.Id">Edit</a> |
+                    <a href="http://localhost:50117/Genre/Delete/@genre.Id">Remove</a>
                 </td>
             </tr>
 
