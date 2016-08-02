@@ -39,5 +39,11 @@ namespace Blockbuster.MVC.Controllers
             MovieService.Insert(movie);
             return RedirectToAction("Index", "Movie");
         }
+
+        public ActionResult Edit(string id)
+        {
+            var movie = MovieService.Find(id);
+            return View(movie);
+        }
     }
 }
