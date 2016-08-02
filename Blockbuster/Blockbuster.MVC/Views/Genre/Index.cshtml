@@ -1,27 +1,29 @@
 ﻿@model IEnumerable<Blockbuster.BusinessModel.Entities.Genre>
 
+<div>
+    <span>Genre List</span>    
+    <span class="pull-right"> @Html.ActionLink("Create New","Create","Genre")</span>
+</div>
 
-    <h3>Genre List</h3>
-    <table>
-        <thead>
+<table class="table">
+    <thead>
         <tr>
-            <td>Name</td>
-            <td>Actions</td>
+            <th>Name</th>
+            <th>Actions</th>
         </tr>
-
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
         @foreach (var genre in Model)
         {
             <tr>
                 <td>@genre.Name</td>
                 <td>
-                    <a href="http://localhost:50117/Genre/Edit/@genre.Id">Edit</a>
-                    <a href="http://localhost:50117/Genre/Delete/@genre.Id">Edit</a>
+                    <a class="btn btn-info" href="http://localhost:50117/Genre/Edit/@genre.Id">Edit</a>
+                    <a class="btn btn-danger" href="http://localhost:50117/Genre/Delete/@genre.Id">Remove</a>
                 </td>
             </tr>
-            
+
         }
-        </tbody>
-    </table>
+    </tbody>
+</table>
 

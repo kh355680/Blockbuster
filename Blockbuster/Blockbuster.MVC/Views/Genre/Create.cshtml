@@ -1,9 +1,27 @@
 ﻿@model Blockbuster.BusinessModel.Entities.Genre
 
-<div>
-    @using (Html.BeginForm("Create","Genre",FormMethod.Post))
-    {
-        @Html.TextBoxFor(genre => genre.Name)
-        @Html.TextBox("Save","Save", new {@type="submit"})
-    }
+<div class="accordion-heading text-justify">Create New Genre</div>
+<hr/>
+<div class="row">
+    <div class="col-lg-6">
+        <div>
+            @using (Html.BeginForm("Create", "Genre", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+                <div class="form-group">
+                    <label class="control-label col-xs-2">Name</label>
+                    <div class="col-xs-10">
+                        @Html.TextBoxFor(genre => genre.Name, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-2 col-xs-10">
+                        <button type="submit" class="btn btn-primary">Create</button>
+                        <a class="btn btn-danger" href="http://localhost:50117/Genre/Index">Cancel</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-lg-6"></div>
 </div>
+
