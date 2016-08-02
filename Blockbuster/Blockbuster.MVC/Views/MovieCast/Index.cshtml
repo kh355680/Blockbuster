@@ -1,0 +1,10 @@
+﻿
+@{
+    string movieId = ViewBag.Movie.Id.ToString();
+}
+
+<h3>@ViewBag.Movie.Name - @ViewBag.Movie.Id</h3>
+<span class="pull-right">
+    <a href="http://localhost:50117/MovieCast/Create/@movieId">Add New Casts</a>
+    @Html.ActionLink("Add New Cast","Create","MovieCast", new { movieId = movieId })
+</span>

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Blockbuster.BusinessModel;
 using Blockbuster.BusinessModel.Entities;
@@ -44,6 +42,13 @@ namespace Blockbuster.MVC.Controllers
         {
             var movie = MovieService.Find(id);
             return View(movie);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Movie movie)
+        {
+            MovieService.Update(movie);
+            return RedirectToAction("Index", "Movie");
         }
     }
 }
