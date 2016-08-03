@@ -11,9 +11,23 @@
 </span>
 
 <div>
-    @foreach (var movieCast in Model)
-    {
-        <h4>@movieCast.Artist.Name</h4> 
-        <span>@Html.ActionLink("Edit","Edit","MovieCast",new {id= movieCast.Id},null)</span>
-    }
+    <table class="table">
+        <tr>
+            <td>Artist Name</td>
+            <td>Role Name</td>
+            <td>Operations</td>
+        </tr>
+
+        @foreach (var movieCast in Model)
+        {
+            <tr>
+                <td>@movieCast.Artist.Name</td>
+                <td>@movieCast.RoleName</td>
+                <td>
+                    <span>@Html.ActionLink("Edit", "Edit", "MovieCast", new {id = movieCast.Id}, null)</span> |
+                    <span>@Html.ActionLink("Delete", "Delete", "MovieCast", new { id = movieCast.Id }, null)</span> 
+                </td>
+            </tr>
+        }
+    </table>    
 </div>

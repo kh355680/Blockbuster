@@ -21,16 +21,23 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(movie => movie.Summary, new { @class = "control-label col-xs-2" })
+        @Html.LabelFor(movie => movie.Summary, new {@class = "control-label col-xs-2"})
         <div class="col-xs-10">
-            @Html.TextAreaFor(movie => movie.Summary, new { @class = "form-control" , cols=3,rows=8})
+            @Html.TextAreaFor(movie => movie.Summary, new {@class = "form-control", cols = 3, rows = 8})
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-2">Genre Name</label>
+        <div class="col-xs-10">
+            @Html.DropDownListFor(movie => movie.GenreId, new SelectList(ViewBag.GenreList, "Id", "Name"), new { @class = "form-control" })
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-xs-offset-2 col-xs-10">
-            @Html.TextBox("Create", "Create", null, new { @type = "submit", @class = "btn btn-primary" })
-            @Html.ActionLink("Cancel", "Index", "Movie", null, new { @class = "btn btn-danger" })
+            @Html.TextBox("Create", "Create", null, new {@type = "submit", @class = "btn btn-primary"})
+            @Html.ActionLink("Cancel", "Index", "Movie", null, new {@class = "btn btn-danger"})
         </div>
     </div>
 

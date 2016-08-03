@@ -2,24 +2,39 @@
 
 @model Blockbuster.BusinessModel.Entities.MovieCast
 
-@{
-//s Model.MovieId = ViewBag.Movie.Name.ToString();
-}
 
 
-@using (Html.BeginForm("Edit", "MovieCast", FormMethod.Post))
-{
 
-    @Html.HiddenFor(movieCast => movieCast.MovieId)
 
-    <br/>
+<div class="accordion-heading text-justify">Edit Cast for @ViewBag.Movie.Name</div>
+<hr />
+<div class="row">
+    <div class="col-lg-6">
+        <div>
+            @using (Html.BeginForm("Edit", "MovieCast", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+                @Html.HiddenFor(movieCast => movieCast.MovieId)
 
-    @Html.DropDownListFor(movieCast => movieCast.ArtistId, new SelectList(ViewBag.ArtistList, "Id", "Name"))
-
-    <br/>
-
-    @Html.TextBoxFor(movieCast => movieCast.RoleName)
-
-    <br/>
-    @Html.TextBox("Add New", "Add New", new {type = "submit"})
-}
+                <div class="form-group">
+                    <label class="control-label col-xs-2">Artist Name</label>
+                    <div class="col-xs-10">
+                        @Html.DropDownListFor(movieCast => movieCast.ArtistId, new SelectList(ViewBag.ArtistList, "Id", "Name"), new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-xs-2">Role Name</label>
+                    <div class="col-xs-10">
+                        @Html.TextBoxFor(movieCast => movieCast.RoleName, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-2 col-xs-10">
+                        @Html.TextBox("Update", "Add New", new { type = "submit", @class = "btn btn-primary" })
+                        @Html.ActionLink("Cancel", "Index", "MovieCast", new { id = Model.MovieId }, null)
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-lg-6"></div>
+</div>

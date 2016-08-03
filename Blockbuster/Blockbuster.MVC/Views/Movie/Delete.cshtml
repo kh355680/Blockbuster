@@ -1,0 +1,18 @@
+﻿
+@model Blockbuster.BusinessModel.Entities.Movie
+
+<div>
+    <h2>Are You Sure, You want to delete @Model.Name</h2>
+    @using (Html.BeginForm("Delete", "Movie", FormMethod.Post))
+    {
+
+        @Html.TextBox("Delete", "Delete", new { type = "submit", @class = "btn btn-danger" })
+
+        <span>&nbsp;</span>
+
+        @Html.ActionLink("Cancel", "Index", "Movie", null, new { @class = "btn btn-warning" })
+
+    }
+</div>
+
+

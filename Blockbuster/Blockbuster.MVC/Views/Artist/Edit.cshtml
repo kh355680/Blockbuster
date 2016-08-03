@@ -1,6 +1,23 @@
 ﻿
+@using Blockbuster.BusinessModel.ViewModel
 @model Blockbuster.BusinessModel.Entities.Artist
 
+@{
+    List<GenderVm> genders = new List<GenderVm>
+    {
+        new GenderVm()
+        {
+            Id = "Male",
+            Name = "Male"
+        },
+        new GenderVm()
+        {
+            Id = "Female",
+            Name = "Female"
+        }
+
+    };
+}
 
 <h3>Edit Info of @Model.Name</h3>
 
@@ -18,7 +35,7 @@
         <div class="form-group">
             @Html.LabelFor(artist => artist.Gender, new { @class = "control-label col-xs-2" })
             <div class="col-xs-10">
-                @Html.TextBoxFor(artist => artist.Gender, new { @class = "form-control" })
+                @Html.DropDownListFor(artist => artist.Gender, new SelectList(genders, "Id", "Name"), new { @class = "form-control" })
             </div>
         </div>
 

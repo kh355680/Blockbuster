@@ -1,0 +1,13 @@
+﻿
+@model Blockbuster.BusinessModel.Entities.MovieCast
+
+<h3>Are You Sure About Removing @Model.RoleName</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor( x => x.MovieId)
+    @Html.HiddenFor(x => x.ArtistId)
+    @Html.TextBox("Remove","Remove",new {type="submit",@class="btn btn-danger"})
+    <span>&nbsp;</span>
+    @Html.ActionLink("Back","Index","MovieCast",new {id= Model.MovieId},null)
+}

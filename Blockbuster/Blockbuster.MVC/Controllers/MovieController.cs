@@ -28,6 +28,7 @@ namespace Blockbuster.MVC.Controllers
         [HttpGet]
         public ActionResult Create()
         {
+            ViewBag.GenreList = new GenreService(new GenreRepository(new Context())).Query().ToList();
             return View();
         }
 
@@ -41,6 +42,7 @@ namespace Blockbuster.MVC.Controllers
         public ActionResult Edit(string id)
         {
             var movie = MovieService.Find(id);
+            ViewBag.GenreList = new GenreService(new GenreRepository(new Context())).Query().ToList();
             return View(movie);
         }
 
@@ -48,6 +50,19 @@ namespace Blockbuster.MVC.Controllers
         public ActionResult Edit(Movie movie)
         {
             MovieService.Update(movie);
+            return RedirectToAction("Index", "Movie");
+        }
+
+        [HttpGet]
+        public ActionResult Delete(string id)
+        {
+            var movie = MovieService.Find(id);
+            return View(movie);
+        }
+
+        public ActionResult Delete(Movie movie)
+        {
+            MovieService.Delete(movie.Id);
             return RedirectToAction("Index", "Movie");
         }
     }

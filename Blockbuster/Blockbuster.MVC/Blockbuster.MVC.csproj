@@ -154,6 +154,9 @@
     <Content Include="Views\MovieCast\Index.cshtml" />
     <Content Include="Views\MovieCast\Create.cshtml" />
     <Content Include="Views\MovieCast\Edit.cshtml" />
+    <Content Include="Views\MovieCast\Delete.cshtml" />
+    <Content Include="Views\Genre\Delete.cshtml" />
+    <Content Include="Views\Movie\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

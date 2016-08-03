@@ -57,6 +57,9 @@ namespace Blockbuster.MVC.Controllers
         {
             var movieCast = MovieCastService.Find(id);
 
+            var movie = new MovieService(new MovieRepository(new Context())).Find(movieCast.MovieId);
+            ViewBag.Movie = movie;
+
             ViewBag.ArtistList = new ArtistService(new ArtistRepository(new Context())).Query();
             return View(movieCast);
         }
@@ -64,6 +67,20 @@ namespace Blockbuster.MVC.Controllers
         public ActionResult Edit(MovieCast movieCast)
         {
             MovieCastService.Update(movieCast);
+            return RedirectToAction("Index", "MovieCast", new { id = movieCast.MovieId });
+        }
+
+        [HttpGet]
+        public ActionResult Delete(string id)
+        {
+            var movieCast = MovieCastService.Find(id);
+            return View(movieCast);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(MovieCast movieCast)
+        {
+            MovieCastService.Delete(movieCast.Id);
             return RedirectToAction("Index", "MovieCast", new { id = movieCast.MovieId });
         }
     }

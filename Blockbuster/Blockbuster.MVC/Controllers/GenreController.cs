@@ -52,9 +52,17 @@ namespace Blockbuster.MVC.Controllers
             return RedirectToAction("Index", "Genre");
         }
 
+        [HttpGet]
         public ActionResult Delete(string id)
         {
-            GenreService.Delete(id);
+            var movie = GenreService.Find(id);
+            return View(movie);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Genre genre)
+        {
+            GenreService.Delete(genre.Id);
             return RedirectToAction("Index", "Genre");
         }
     }
