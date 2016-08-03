@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System.Data.Entity;
+using System.Linq;
+using System.Web.Mvc;
 using Blockbuster.BusinessModel;
 using Blockbuster.BusinessModel.Entities;
 using Blockbuster.Repositories.Repositories;
@@ -20,16 +22,49 @@ namespace Blockbuster.MVC.Controllers
         public ActionResult Index(string id)
         {
             var movie = new MovieService(new MovieRepository(new Context())).Find(id);
+
+            var movieCasts = MovieCastService.Query().Where(x => x.MovieId == id).Include( x => x.Artist).ToList();
             ViewBag.Movie = movie;
-            return View();
+            return View(movieCasts);
         }
 
         [HttpGet]
-        public ActionResult Create(string movieId)
+        public ActionResult Create(string id)
         {
-            var movie = new MovieService(new MovieRepository(new Context())).Find(movieId);
+            var movie = new MovieService(new MovieRepository(new Context())).Find(id);
             ViewBag.Movie = movie;
-            return View();
+
+            var movieCast = new MovieCast()
+            {
+                MovieId = movie.Id
+            };
+
+            ViewBag.ArtistList = new ArtistService(new ArtistRepository(new Context())).Query();
+            return View(movieCast);
+        }
+
+        [HttpPost]
+        public ActionResult Create(MovieCast movieCast)
+        {
+            //var movie = new MovieService(new MovieRepository(new Context())).Find(id);
+            //ViewBag.Movie = movie;
+            MovieCastService.Insert(movieCast);
+            return RedirectToAction("Index","MovieCast",new {id = movieCast.MovieId});
+        }
+
+        [HttpGet]
+        public ActionResult Edit(string id)
+        {
+            var movieCast = MovieCastService.Find(id);
+
+            ViewBag.ArtistList = new ArtistService(new ArtistRepository(new Context())).Query();
+            return View(movieCast);
+        }
+
+        public ActionResult Edit(MovieCast movieCast)
+        {
+            MovieCastService.Update(movieCast);
+            return RedirectToAction("Index", "MovieCast", new { id = movieCast.MovieId });
         }
     }
 }

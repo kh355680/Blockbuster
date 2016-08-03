@@ -1,10 +1,19 @@
 ﻿
+@model IEnumerable<Blockbuster.BusinessModel.Entities.MovieCast>
+
 @{
-    string movieId = ViewBag.Movie.Id.ToString();
+    string movieId = ViewBag.Movie.Id;
 }
 
-<h3>@ViewBag.Movie.Name - @ViewBag.Movie.Id</h3>
+<h3>@ViewBag.Movie.Name</h3>
 <span class="pull-right">
-    <a href="http://localhost:50117/MovieCast/Create/@movieId">Add New Casts</a>
-    @Html.ActionLink("Add New Cast","Create","MovieCast", new { movieId = movieId })
+    @Html.ActionLink("Add New Cast", "Create", "MovieCast", new {@id = movieId}, null)
 </span>
+
+<div>
+    @foreach (var movieCast in Model)
+    {
+        <h4>@movieCast.Artist.Name</h4> 
+        <span>@Html.ActionLink("Edit","Edit","MovieCast",new {id= movieCast.Id},null)</span>
+    }
+</div>

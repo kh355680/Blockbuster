@@ -153,6 +153,7 @@
     <Content Include="Views\Movie\Edit.cshtml" />
     <Content Include="Views\MovieCast\Index.cshtml" />
     <Content Include="Views\MovieCast\Create.cshtml" />
+    <Content Include="Views\MovieCast\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
